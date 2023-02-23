@@ -94,7 +94,7 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "homepage": ".",
+  "homepage": "./",
   "jest": {
     "transformIgnorePatterns": [
       "node_modules/(?!(roughjs|points-on-curve|path-data-parser|points-on-path|browser-fs-access)/)"
@@ -110,6 +110,8 @@
     "build:app": "cross-env REACT_APP_GIT_SHA=$VERCEL_GIT_COMMIT_SHA react-scripts build",
     "build:version": "node ./scripts/build-version.js",
     "build": "yarn build:app && yarn build:version",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build" ,
     "eject": "react-scripts eject",
     "fix:code": "yarn test:code --fix",
     "fix:other": "yarn prettier --write",
