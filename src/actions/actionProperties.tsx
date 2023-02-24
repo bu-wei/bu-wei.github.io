@@ -661,12 +661,12 @@ export const actionChangeFontFamily = register({
       icon: JSX.Element;
     }[] = [
       {
-        value: FONT_FAMILY.Virgil,
-        text: t("labels.handDrawn"),
+        value: FONT_FAMILY.XiaolaiMonoSCRegular,
+        text: t("labels.handChinese"),
         icon: FreedrawIcon,
       },
       {
-        value: FONT_FAMILY.XiaolaiMonoSCRegular,
+        value: FONT_FAMILY.Virgil,
         text: t("labels.handDrawn"),
         icon: FreedrawIcon,
       },
